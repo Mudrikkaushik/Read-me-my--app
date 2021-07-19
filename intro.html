@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Page</title>
+</head>
+<body style=" background-image: url('static/i.jpg'); background-repeat:no-repeat; background-size: 1920px 1080px;">
+<br><br><br>
+
+ <h1 style="color:rgb(255, 255, 255);font-size:30px;text-align: center;">𝔘𝔭𝔩𝔬𝔞𝔡 𝔪𝔲𝔩𝔱𝔦𝔭𝔩𝔢 𝔧𝔭𝔢𝔤,𝔭𝔫𝔤 𝔬𝔯 𝔧𝔭𝔤 𝔣𝔦𝔩𝔢 𝔬𝔯 𝔭𝔞𝔤𝔢𝔰</h1s
+	<div style="text-align: center;">
+<form class="" action="image_upload" method="POST" enctype = "multipart/form-data">
+		<input id="first" type="file" name="file[]" multiple="" value="" autocomplete="off" accept=".csv, application/vnd.ms-excel" required >
+		<input id="submit1" type="submit" name="" value="Submit">
+	</form>
+        </div>
+<br><br>
+
+<h2 style="color:rgb(0, 0, 0);font-size:30px;text-align: center;">𝔇𝔢𝔩𝔢𝔱𝔢 𝔓𝔞𝔤𝔢𝔰</h2>
+<h3 style="color:rgb(255, 255, 255);font-size:20px;text-align: center;">(𝔘𝔭𝔩𝔬𝔞𝔡 𝔶𝔬𝔲𝔯 𝔦𝔪𝔞𝔤𝔢𝔰 𝔣𝔦𝔯𝔰𝔱)</h3>
+
+ <form style = "margin:auto; width: 48%; border: 3px solid rgb(230, 230, 230); padding: 20px; " action="delete_pages" method="POST" enctype = "multipart/form-data">
+
+     <div class="tooltip">
+ <input style="margin-left: 40px" placeholder="From Page No." id="From" type="number" min="0" max="" name="From" class="form-control" required>
+ <input style="margin-left: 80px" placeholder="To Page No." id="To" type="number" min="0" max="" name="To" class="form-control" required>
+  <span class="tooltiptext">𝕿𝖔 𝖉𝖊𝖑𝖊𝖙𝖊 𝖘𝖎𝖓𝖌𝖑𝖊 𝖕𝖆𝖌𝖊, 𝖋𝖎𝖑𝖑 𝖘𝖆𝖒𝖊 𝕻𝖆𝖌𝖊 𝕹𝖔. 𝖎𝖓 𝖇𝖔𝖙𝖍 𝖇𝖔𝖝𝖊𝖘</span>
+     </div>
+
+ <input style="margin-left: 120px" id="submit2" type="submit" value="Delete">
+ </form>
+     <br><br>
+
+<div style="text-align: center;color:rgb(255, 255, 255);font-size:25px;">
+{{text}}
+    </div> </form >
+<br><br>
+
+  {% if check == 'view'%}
+<form style = "margin:auto; width: 48%; border: 2px solid rgb(255, 251, 251); padding: 10px; " action="view_pdf" method="POST" enctype = "multipart/form-data">
+    <input style="margin-left:250px;color:black;font-size:20px;" id="submit3" type="submit" value="Tap to view edited pdf">
+    {% endif %}
+</form>
+</body>
+
+<style>
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+</style>
+
+</html>
